@@ -8,7 +8,7 @@ plugins {
 apply plugin:'war'
 
 bootWar {
-	archiveName("PROJECT_NAME.war")
+	archiveName("ROOT.war")
 }
 
 group = 'hello'
@@ -34,8 +34,14 @@ dependencies {
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 
 	annotationProcessor 'org.projectlombok:lombok'
+
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+
+	testCompileOnly 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
 }
 
 tasks.named('test') {
