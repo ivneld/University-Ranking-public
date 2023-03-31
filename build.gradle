@@ -1,19 +1,14 @@
 plugins {
-	id 'org.springframework.boot' version '2.7.4'
-	id 'io.spring.dependency-management' version '1.0.14.RELEASE'
 	id 'java'
-	id 'war'
+	id 'org.springframework.boot' version '2.7.9'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	//querydsl 추가
+	id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
 }
 
-apply plugin:'war'
-
-bootWar {
-	archiveName("ROOT.war")
-}
-
-group = 'hello'
+group = 'study'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+sourceCompatibility = '11'
 
 configurations {
 	compileOnly {
@@ -26,24 +21,44 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.5.7'
 	implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	//querydsl 추가
+	implementation "com.querydsl:querydsl-jpa:5.0.0"
+	implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client'
+
 	compileOnly 'org.projectlombok:lombok'
 
+	runtimeOnly 'com.h2database:h2'
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 
 	annotationProcessor 'org.projectlombok:lombok'
-
-	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
-
-	testCompileOnly 'org.projectlombok:lombok'
-	testAnnotationProcessor 'org.projectlombok:lombok'
+	annotationProcessor "com.querydsl:querydsl-apt:5.0.0"
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
+	testCompileOnly 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok'
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+//querydsl 추가 시작
+def querydslDir = "$buildDir/generated/querydsl"
+querydsl {
+	jpa = true
+	querydslSourcesDir = querydslDir
+}
+sourceSets {
+	main.java.srcDir querydslDir
+}
+configurations {
+	querydsl.extendsFrom compileClasspath
+}
+compileQuerydsl {
+	options.annotationProcessorPath = configurations.querydsl
+}
+//querydsl 추가 끝
