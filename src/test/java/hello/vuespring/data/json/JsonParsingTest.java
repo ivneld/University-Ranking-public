@@ -55,17 +55,17 @@ class JsonParsingTest {
                 universityRepository.save(university);
                 saveQs(university);
                 saveThe(university);
+
             }
             initMajor();
+            initOverallTest();
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
     }
-
-    @Test
-    @Rollback(false)
     public void initOverallTest() throws IOException, ParseException {
         ArrayList<OverallRank> result = new ArrayList<>();
         File dir = new File(folderPath);
@@ -88,8 +88,10 @@ class JsonParsingTest {
                     Integer global_rank = isNullable(jsonObject, "Global Rank");
                     Integer year = Integer.parseInt(folder.getName());
 
-                    if (universityRepository.findByName(institution) == null)
-                        universityRepository.save(new University(institution));
+                    if (universityRepository.findByName(institution) == null) {
+                        String korName = findKorName(parser, institution);
+                        universityRepository.save(new University(institution, korName));
+                    }
 
                     University university = universityRepository.findByName(institution);
                     String majorName = jsonFile.getName().substring(32, jsonFile.getName().indexOf("  -"));
@@ -103,6 +105,20 @@ class JsonParsingTest {
         for (OverallRank overallRank : result) {
             overallRankRepository.save(overallRank);
         }
+    }
+
+    private static String findKorName(JSONParser parser, String institution) throws IOException, ParseException {
+        String forNoNameFilePath = "/Users/kimyuseong/study/vue-springV2/src/test/resources/for_none_kor_name.json";
+        FileReader temp = new FileReader(forNoNameFilePath);
+        JSONArray parse = (JSONArray) parser.parse(temp);
+
+        String korName="";
+        for (Object o1 : parse) {
+            JSONObject object = (JSONObject) o1;
+            if(object.get("eng_name").equals(institution))
+                korName = (String)object.get("kor_name");
+        }
+        return korName;
     }
 
     @Test

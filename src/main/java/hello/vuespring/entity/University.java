@@ -53,7 +53,8 @@ public class University {
         this.website = website;
     }
 
-    public University(String engName) {
+    public University(String engName, String name) {
         this.engName = engName;
+        this.name = name;
     }
 }

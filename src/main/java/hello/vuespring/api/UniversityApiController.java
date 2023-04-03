@@ -26,7 +26,7 @@ public class UniversityApiController {
     @Autowired
     MajorRepository majorRepository;
 
-    @GetMapping("/test")
+    @GetMapping("/universities")
     public MainPageDto test() {
         List<TempDto> result = universityRepositoryCustom.findAllInfo();
         List<Major> majorList = majorRepository.findAll();
