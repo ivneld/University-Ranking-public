@@ -65,36 +65,6 @@ class JsonParsingTest {
     }
 
     @Test
-    public void test2() throws IOException, ParseException {
-        String folderPath = "/Users/kimyuseong/study/vue-springV2/src/test/resources/vue-spring data";
-        File dir = new File(folderPath);
-
-        File[] files = dir.listFiles();
-        for (File file : files) {
-            String filePath = file.getAbsolutePath();
-            File file1 = new File(filePath);
-
-            File[] files1 = file1.listFiles();
-            for (File file2 : files1) {
-                JSONParser parser = new JSONParser();
-                FileReader reader = new FileReader(file2.getAbsolutePath());
-                JSONArray array = (JSONArray) parser.parse(reader);
-
-                for (Object o : array) {
-                    JSONObject jsonObject = (JSONObject) o;
-                    String institution = (String) jsonObject.get("Institution");
-                    Integer rank = isNullable(jsonObject, "Rank");
-                    Integer global_rank = isNullable(jsonObject, "Global Rank");
-
-                    University university = universityRepository.findByName(institution.replace(" *", ""));
-                    if(university == null)
-                    log.info("find={}", file.getName());
-                }
-            }
-        }
-    }
-
-    @Test
     @Rollback(false)
     public void initOverallTest() throws IOException, ParseException {
         ArrayList<OverallRank> result = new ArrayList<>();
