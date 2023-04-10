@@ -20,6 +20,7 @@ public class Major {
     private Long id;
 
     private String name;
+    private String korName;
 
     @OneToMany(mappedBy = "major", cascade = CascadeType.ALL)
     List<OverallRank> overallRanks = new ArrayList<>();

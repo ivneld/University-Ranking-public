@@ -20,7 +20,7 @@
 #aws 서버 환경
 spring:
   datasource:
-    url: jdbc:mariadb://52.78.128.18:3306/university?createDatabaseIfNotExist=true&characterEncoding=utf8
+    url: jdbc:mariadb://52.79.78.43:3306/university?createDatabaseIfNotExist=true&characterEncoding=utf8
     username: root
     password: 1234
     driver-class-name: org.mariadb.jdbc.Driver
