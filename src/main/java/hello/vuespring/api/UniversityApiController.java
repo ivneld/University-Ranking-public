@@ -9,6 +9,7 @@ import hello.vuespring.repository.OverallRankRepositoryCustom;
 import hello.vuespring.repository.UniversityRepositoryCustom;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,6 +18,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin("http://k-ranking.co.kr")
 public class UniversityApiController {
 
     @Autowired
@@ -27,7 +29,7 @@ public class UniversityApiController {
     MajorRepository majorRepository;
 
     @GetMapping("/universities")
-    public MainPageDto test() {
+    public MainPageDto mainPageDto() {
         List<TempDto> result = universityRepositoryCustom.findAllInfo();
         List<Major> majorList = majorRepository.findAll();
         List<String> majors = new ArrayList<>();
