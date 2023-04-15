@@ -18,7 +18,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin("http://k-ranking.co.kr")
+@CrossOrigin(origins = "*")
 public class UniversityApiController {
 
     @Autowired
