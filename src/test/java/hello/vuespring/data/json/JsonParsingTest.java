@@ -55,7 +55,6 @@ class JsonParsingTest {
                 universityRepository.save(university);
                 saveQs(university);
                 saveThe(university);
-
             }
             initMajor();
             initOverallTest();
