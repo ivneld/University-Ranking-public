@@ -9,15 +9,15 @@ import org.springframework.stereotype.Component;
 @NoArgsConstructor
 public class FilePath {
 
-    private final String qsPath = "resources/jsondata/qs/QS_combined_data.json";
-    private final String qsPath_2021 = "resources/jsondata/qs/QS_university_info_2021.json";
-    private final String qsPath_2020 = "resources/jsondata/qs/QS_university_info_2020.json";
+    private final String qsPath = "src/main/resources/jsondata/qs/QS_combined_data.json";
+    private final String qsPath_2021 = "src/main/resources/jsondata/qs/QS_university_info_2021.json";
+    private final String qsPath_2020 = "src/main/resources/jsondata/qs/QS_university_info_2020.json";
 
-    private final String thePath = "resources/jsondata/the/THE_combined_data.json";
-    private final String thePath_2021 = "resources/jsondata/the/THE_university_info_2021.json";
-    private final String thePath_2020 = "resources/jsondata/the/THE_university_info_2020.json";
+    private final String thePath = "src/main/resources/jsondata/the/THE_combined_data.json";
+    private final String thePath_2021 = "src/main/resources/jsondata/the/THE_university_info_2021.json";
+    private final String thePath_2020 = "src/main/resources/jsondata/the/THE_university_info_2020.json";
 
-    private final String folderPath = "resources/vue-spring data";
+    private final String folderPath = "src/main/resources/vue-spring data";
 
 
 }
