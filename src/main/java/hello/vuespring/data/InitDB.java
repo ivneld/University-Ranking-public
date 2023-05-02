@@ -26,7 +26,7 @@ public class InitDB {
 
     private final InitService initService;
 
-    @PostConstruct
+//    @PostConstruct
     public void init() {
         initService.dbInit();
     }
@@ -36,7 +36,6 @@ public class InitDB {
     @RequiredArgsConstructor
     static class InitService{
 
-        private final EntityManager em;
         private final UniversityRepository universityRepository;
         private final QsRepository qsRepository;
         private final TheRepository theRepository;
