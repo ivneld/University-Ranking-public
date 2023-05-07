@@ -56,11 +56,10 @@ public class JsonParsing {
         JSONObject jsonObject = (JSONObject) parser.parse(reader);
 
         JSONArray jsonArray = (JSONArray) jsonObject.get(year.toString());
-
         for (Object o : jsonArray) {
             JSONObject object = (JSONObject) o;
             String uniName = (String) object.get("uni_name");
-
+            System.out.println("uniName = " + uniName);
             if (uniName.equals(university.getName())) {
                 return getQs(university, year, object);
             }

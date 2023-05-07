@@ -62,6 +62,8 @@ public class InitDB {
         }
 
         private void saveQs(University university, FilePath filePath) throws IOException, ParseException {
+            System.out.println("filePath = " + filePath.getQsPath());
+
             Optional<Qs> qs2022 = jsonParsing.initQs(university, filePath.getQsPath(), 2022);
             Optional<Qs> qs2021 = jsonParsing.initQs(university, filePath.getQsPath_2021(), 2021);
             Optional<Qs> qs2020 = jsonParsing.initQs(university, filePath.getQsPath_2020(), 2020);

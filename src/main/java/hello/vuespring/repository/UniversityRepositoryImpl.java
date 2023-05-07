@@ -27,4 +27,6 @@ public class UniversityRepositoryImpl implements UniversityRepositoryCustom{
                 .from(university)
                 .fetch();
     }
+
+
 }

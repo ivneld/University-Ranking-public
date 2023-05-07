@@ -32,6 +32,14 @@ public class University {
     private Integer tuition;
     private String website;
 
+//    private String foreign;
+//    private String studProfessRatio;
+//    private String employment;
+//    private String dormitory;
+//    private String scholarship;
+//    private String education;
+//    private String library;
+
     @OneToMany(mappedBy = "university", cascade = CascadeType.ALL)
     List<Qs> qsList = new ArrayList<>();
 
