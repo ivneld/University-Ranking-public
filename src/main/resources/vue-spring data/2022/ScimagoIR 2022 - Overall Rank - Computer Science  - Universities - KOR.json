@@ -1,0 +1,555 @@
+[
+ {
+   "Rank": 1,
+   "Global Rank": 71,
+   "Institution": "Korea Advanced Institute of Science and Technology *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 2,
+   "Global Rank": 89,
+   "Institution": "Seoul National University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 3,
+   "Global Rank": 145,
+   "Institution": "Korea University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 4,
+   "Global Rank": 183,
+   "Institution": "Yonsei University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 5,
+   "Global Rank": 237,
+   "Institution": "Sungkyunkwan University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 6,
+   "Global Rank": 244,
+   "Institution": "Hanyang University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 7,
+   "Global Rank": 280,
+   "Institution": "Pohang University of Science and Technology",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 8,
+   "Global Rank": 302,
+   "Institution": "Kyung Hee University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 9,
+   "Global Rank": 317,
+   "Institution": "Kyungpook National University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 10,
+   "Global Rank": 320,
+   "Institution": "Sejong University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 11,
+   "Global Rank": 345,
+   "Institution": "Chung-Ang University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 12,
+   "Global Rank": 383,
+   "Institution": "Yeungnam University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 13,
+   "Global Rank": 390,
+   "Institution": "Dongguk University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 14,
+   "Global Rank": 404,
+   "Institution": "Ajou University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 15,
+   "Global Rank": 412,
+   "Institution": "Ulsan National Institute of Science and Technology *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 16,
+   "Global Rank": 441,
+   "Institution": "Pusan National University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 17,
+   "Global Rank": 445,
+   "Institution": "Gachon University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 18,
+   "Global Rank": 458,
+   "Institution": "Chonbuk National University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 19,
+   "Global Rank": 461,
+   "Institution": "Inha University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 20,
+   "Global Rank": 463,
+   "Institution": "Gwangju Institute of Science and Technology",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 21,
+   "Global Rank": 467,
+   "Institution": "Catholic University of Korea *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 22,
+   "Global Rank": 468,
+   "Institution": "Daegu Gyeongbuk Institute of Science and Technology",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 23,
+   "Global Rank": 474,
+   "Institution": "Chonnam National University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 24,
+   "Global Rank": 485,
+   "Institution": "Incheon National University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 25,
+   "Global Rank": 493,
+   "Institution": "Sookmyung Womens University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 26,
+   "Global Rank": 501,
+   "Institution": "Soongsil University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 27,
+   "Global Rank": 503,
+   "Institution": "Soon Chun Hyang University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 28,
+   "Global Rank": 506,
+   "Institution": "University of Ulsan *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 29,
+   "Global Rank": 512,
+   "Institution": "Konkuk University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 30,
+   "Global Rank": 514,
+   "Institution": "Seoul National University of Science & Technology",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 31,
+   "Global Rank": 517,
+   "Institution": "Ewha Womans University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 31,
+   "Global Rank": 517,
+   "Institution": "The Korea National University of Transportation",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 33,
+   "Global Rank": 523,
+   "Institution": "Chungbuk National University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 33,
+   "Global Rank": 523,
+   "Institution": "Cha University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 35,
+   "Global Rank": 524,
+   "Institution": "Hongik University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 36,
+   "Global Rank": 550,
+   "Institution": "Sogang University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 37,
+   "Global Rank": 557,
+   "Institution": "Chosun University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 38,
+   "Global Rank": 558,
+   "Institution": "Keimyung University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 39,
+   "Global Rank": 568,
+   "Institution": "Kwangwoon University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 40,
+   "Global Rank": 574,
+   "Institution": "Korea University of Science and Technology",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 41,
+   "Global Rank": 579,
+   "Institution": "Chungnam National University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 42,
+   "Global Rank": 586,
+   "Institution": "Kumoh National Institute of Technology",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 43,
+   "Global Rank": 592,
+   "Institution": "University of Seoul",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 44,
+   "Global Rank": 595,
+   "Institution": "Korea University of Technology and Education",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 45,
+   "Global Rank": 596,
+   "Institution": "Kookmin University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 46,
+   "Global Rank": 603,
+   "Institution": "Inje University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 47,
+   "Global Rank": 604,
+   "Institution": "Kangwon National University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 48,
+   "Global Rank": 614,
+   "Institution": "Hoseo University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 48,
+   "Global Rank": 614,
+   "Institution": "Hanbat National University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 50,
+   "Global Rank": 618,
+   "Institution": "Sangmyung University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 51,
+   "Global Rank": 623,
+   "Institution": "Sunchon National University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 52,
+   "Global Rank": 628,
+   "Institution": "Mokpo National University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 53,
+   "Global Rank": 637,
+   "Institution": "Daegu University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 54,
+   "Global Rank": 643,
+   "Institution": "Pukyong National University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 54,
+   "Global Rank": 643,
+   "Institution": "Myongji University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 56,
+   "Global Rank": 650,
+   "Institution": "Dankook University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 56,
+   "Global Rank": 650,
+   "Institution": "Woosong University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 58,
+   "Global Rank": 651,
+   "Institution": "Wonkwang University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 59,
+   "Global Rank": 654,
+   "Institution": "Hallym University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 59,
+   "Global Rank": 654,
+   "Institution": "Jeju National University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 61,
+   "Global Rank": 657,
+   "Institution": "Hankuk University of Foreign Studies",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 62,
+   "Global Rank": 664,
+   "Institution": "Hankyong National University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 63,
+   "Global Rank": 666,
+   "Institution": "Gyeongsang National University *",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 63,
+   "Global Rank": 666,
+   "Institution": "Kongju National University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 63,
+   "Global Rank": 666,
+   "Institution": "Korea Polytechnic University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 66,
+   "Global Rank": 667,
+   "Institution": "Korea Aerospace University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 67,
+   "Global Rank": 675,
+   "Institution": "Kunsan National University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 68,
+   "Global Rank": 681,
+   "Institution": "Handong Global University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 69,
+   "Global Rank": 684,
+   "Institution": "Hannam University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 70,
+   "Global Rank": 695,
+   "Institution": "Kyonggi University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 71,
+   "Global Rank": 696,
+   "Institution": "Hansung University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 72,
+   "Global Rank": 705,
+   "Institution": "Cheongju University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 73,
+   "Global Rank": 726,
+   "Institution": "Dong-A University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 74,
+   "Global Rank": 739,
+   "Institution": "Korea Maritime University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 75,
+   "Global Rank": 748,
+   "Institution": "Kyungnam University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 76,
+   "Global Rank": 776,
+   "Institution": "Gangneung-Wonju National University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 77,
+   "Global Rank": 787,
+   "Institution": "Tongmyong University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 78,
+   "Global Rank": 791,
+   "Institution": "Changwon National University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ },
+ {
+   "Rank": 79,
+   "Global Rank": 825,
+   "Institution": "Namseoul University",
+   "Country": "KOR",
+   "Sector": "Universities"
+ }
+]

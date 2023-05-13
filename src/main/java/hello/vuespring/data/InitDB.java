@@ -26,7 +26,7 @@ public class InitDB {
 
     private final InitService initService;
 
-//    @PostConstruct
+    @PostConstruct
     public void init() {
         initService.dbInit();
     }
@@ -96,6 +96,7 @@ public class InitDB {
                 File file = new File(targetPath);
 
                 File[] files = file.listFiles();
+                System.out.println("filePath=" +  file.getAbsoluteFile());
                 for (File jsonFile : files) {
                     JSONParser parser = new JSONParser();
                     FileReader reader = new FileReader(jsonFile.getAbsolutePath());
@@ -142,6 +143,7 @@ public class InitDB {
                         }
 
                         University university = universityRepository.findByName(institution);
+                        System.out.println("result=" + jsonFile.getName());
                         String majorName = jsonFile.getName().substring(32, jsonFile.getName().indexOf("  -"));
                         Major major = majorRepository.findByName(majorName);
 
