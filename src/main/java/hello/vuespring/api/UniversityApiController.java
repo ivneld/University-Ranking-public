@@ -41,7 +41,7 @@ public class UniversityApiController {
         return mainPageService.modalDtoService(Long.parseLong(id));
     }
 
-    @GetMapping("universities/{year}")
+    @GetMapping("universities/year/{year}")
     public MainPageDto mainPageYearResponse(@PathVariable("year") Integer year) {
         return mainPageService.mainPageYearResponse(year);
     }
