@@ -66,6 +66,6 @@ compileQuerydsl {
 
 // 빌드시 test 패키지는 포함하지 않음
 // 또한, 테스트 작동하지 않으므로 주석 처리 후 테스트를 실행 해야 함
-//test.onlyIf {
-//	!project.hasProperty('test')
-//}
+test.onlyIf {
+	!project.hasProperty('test')
+}
