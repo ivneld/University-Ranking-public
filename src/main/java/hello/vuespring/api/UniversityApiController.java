@@ -8,7 +8,7 @@ import hello.vuespring.entity.Major;
 import hello.vuespring.repository.MajorRepository;
 import hello.vuespring.repository.OverallRankRepositoryCustom;
 import hello.vuespring.repository.UniversityRepositoryCustom;
-import hello.vuespring.service.main.ModalService;
+import hello.vuespring.service.MainPageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -29,28 +29,20 @@ public class UniversityApiController {
     @Autowired
     MajorRepository majorRepository;
     @Autowired
-    ModalService modalService;
+    MainPageService mainPageService;
 
     @GetMapping("/universities")
     public MainPageDto mainPageResponse() {
-        List<TempDto> result = universityRepositoryCustom.findAllInfo();
-        List<Major> majorList = majorRepository.findAll();
-        List<String> majors = new ArrayList<>();
-
-        for (Major major : majorList) {
-            majors.add(major.getName());
-        }
-        for (TempDto tempDto : result) {
-            List<MajorRankDto> rank = overallRankRepositoryCustom.findRankWithUniversityId(tempDto.getUni_id());
-            tempDto.setRank(rank);
-        }
-
-
-        return new MainPageDto(result, majors);
+        return mainPageService.mainPageResponse();
     }
 
     @GetMapping("universities/{uni_id}")
     public ModalDto modalPageResponse(@PathVariable("uni_id") String id) {
-        return modalService.modalDtoService(Long.parseLong(id));
+        return mainPageService.modalDtoService(Long.parseLong(id));
+    }
+
+    @GetMapping("universities/{year}")
+    public MainPageDto mainPageYearResponse(@PathVariable("year") Integer year) {
+        return mainPageService.mainPageYearResponse(year);
     }
 }

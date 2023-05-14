@@ -91,6 +91,7 @@ public class InitDB {
             File dir = new File(filePath.getFolderPath());
 
             File[] rootFolder = dir.listFiles();
+            System.out.println("rootFolder=" +  dir);
             for (File folder : rootFolder) {
                 String targetPath = folder.getAbsolutePath();
                 File file = new File(targetPath);

@@ -9,4 +9,5 @@ import java.util.List;
 public interface OverallRankRepositoryCustom {
 
     List<MajorRankDto> findRankWithUniversityId(@Param("id") Long id);
+    List<MajorRankDto> findRankWithUniversityIdAndYear(@Param("id") Long id, @Param("year") Integer year);
 }

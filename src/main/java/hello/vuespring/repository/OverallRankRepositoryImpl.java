@@ -4,6 +4,7 @@ import com.querydsl.jpa.impl.JPAQueryFactory;
 import hello.vuespring.api.dto.MainPageDto;
 import hello.vuespring.api.dto.MajorRankDto;
 import hello.vuespring.api.dto.QMajorRankDto;
+import hello.vuespring.entity.QMajor;
 import org.springframework.data.repository.query.Param;
 
 import javax.persistence.EntityManager;
@@ -28,6 +29,16 @@ public class OverallRankRepositoryImpl implements OverallRankRepositoryCustom {
                 .from(overallRank)
                 .leftJoin(major).on(overallRank.major.id.eq(major.id))
                 .where(overallRank.university.id.eq(id))
+                .fetch();
+    }
+
+    @Override
+    public List<MajorRankDto> findRankWithUniversityIdAndYear(Long id, Integer year) {
+        return queryFactory
+                .select(new QMajorRankDto(major.name, overallRank.totRank, overallRank.gloRank, overallRank.dataYear))
+                .from(overallRank)
+                .leftJoin(major).on(overallRank.major.id.eq(major.id))
+                .where(overallRank.university.id.eq(id).and(overallRank.dataYear.eq(year)))
                 .fetch();
     }
 }

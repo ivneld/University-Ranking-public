@@ -17,7 +17,7 @@ public class FilePath {
     private final String thePath_2021 = "/Users/kimyuseong/study/vue-springV2/src/main/resources/jsondata/the/THE_university_info_2021.json";
     private final String thePath_2020 = "/Users/kimyuseong/study/vue-springV2/src/main/resources/jsondata/the/THE_university_info_2020.json";
 
-    private final String folderPath = "/Users/kimyuseong/study/vue-springV2/src/main/resources/vue-spring data";
+    private final String folderPath = "/Users/kimyuseong/study/vue-springV2/src/main/resources/vue-spring-data";
 
 
 }
