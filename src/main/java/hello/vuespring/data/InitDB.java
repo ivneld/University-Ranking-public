@@ -26,7 +26,7 @@ public class InitDB {
 
     private final InitService initService;
 
-//    @PostConstruct
+    @PostConstruct
     public void init() {
         initService.dbInit();
     }
@@ -107,6 +107,18 @@ public class InitDB {
                     if(majorRepository.findByName(majorName) == null)
                         majorRepository.save(new Major(majorName));
                 }
+            }
+
+            FileReader reader = new FileReader(filePath.getMajorNamePath());
+            JSONParser parser = new JSONParser();
+            JSONArray array = (JSONArray) parser.parse(reader);
+            for (Object o : array) {
+                JSONObject object = (JSONObject) o;
+                String eng_name = (String) object.get("eng_name");
+                String kor_name = (String) object.get("kor_name");
+                Major major = majorRepository.findByName(eng_name);
+
+                major.setKorName(kor_name);
             }
         }
         private static Integer isNullable(JSONObject object, String key) {

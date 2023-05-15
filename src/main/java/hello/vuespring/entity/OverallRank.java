@@ -3,6 +3,7 @@ package hello.vuespring.entity;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 
@@ -19,8 +20,11 @@ public class OverallRank {
     @Column(name = "rank_id")
     private Long id;
 
+    @ColumnDefault("0")
     private Integer totRank;
+    @ColumnDefault("0")
     private Integer gloRank;
+    @ColumnDefault("0")
     private Integer dataYear;
 
     @ManyToOne(fetch = LAZY)

@@ -25,7 +25,7 @@ public class OverallRankRepositoryImpl implements OverallRankRepositoryCustom {
     @Override
     public List<MajorRankDto> findRankWithUniversityId(@Param("id") Long id) {
         return queryFactory
-                .select(new QMajorRankDto(major.name, overallRank.totRank, overallRank.gloRank, overallRank.dataYear))
+                .select(new QMajorRankDto(major.name,major.korName, overallRank.totRank, overallRank.gloRank, overallRank.dataYear))
                 .from(overallRank)
                 .leftJoin(major).on(overallRank.major.id.eq(major.id))
                 .where(overallRank.university.id.eq(id))
@@ -35,7 +35,7 @@ public class OverallRankRepositoryImpl implements OverallRankRepositoryCustom {
     @Override
     public List<MajorRankDto> findRankWithUniversityIdAndYear(Long id, Integer year) {
         return queryFactory
-                .select(new QMajorRankDto(major.name, overallRank.totRank, overallRank.gloRank, overallRank.dataYear))
+                .select(new QMajorRankDto(major.name, major.korName, overallRank.totRank, overallRank.gloRank, overallRank.dataYear))
                 .from(overallRank)
                 .leftJoin(major).on(overallRank.major.id.eq(major.id))
                 .where(overallRank.university.id.eq(id).and(overallRank.dataYear.eq(year)))

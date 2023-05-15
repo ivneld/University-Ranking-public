@@ -19,5 +19,6 @@ public class FilePath {
 
     private final String folderPath = "/Users/kimyuseong/study/vue-springV2/src/main/resources/vue-spring-data";
 
+    private final String majorNamePath = "/Users/kimyuseong/study/vue-springV2/src/main/resources/jsondata/major_kor_name.json";
 
 }

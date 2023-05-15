@@ -46,7 +46,7 @@ public class MainPageService {
         List<String> majors = new ArrayList<>();
 
         for (Major major : majorList) {
-            majors.add(major.getName());
+            majors.add(major.getKorName());
         }
         for (TempDto tempDto : result) {
             List<MajorRankDto> rank = overallRankRepositoryCustom.findRankWithUniversityIdAndYear(tempDto.getUni_id(), 2023);

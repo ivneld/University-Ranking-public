@@ -20,11 +20,16 @@ public class Major {
     private Long id;
 
     private String name;
+    private String korName;
 
     @OneToMany(mappedBy = "major", cascade = CascadeType.ALL)
     List<OverallRank> overallRanks = new ArrayList<>();
 
     public Major(String name) {
         this.name = name;
+    }
+
+    public void setKorName(String name) {
+        this.korName = name;
     }
 }
