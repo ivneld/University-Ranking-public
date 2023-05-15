@@ -52,8 +52,6 @@ public class MainPageService {
             List<MajorRankDto> rank = overallRankRepositoryCustom.findRankWithUniversityIdAndYear(tempDto.getUni_id(), 2023);
             tempDto.setRank(rank);
         }
-
-
         return new MainPageDto(result, majors);
     }
 
@@ -69,8 +67,6 @@ public class MainPageService {
             List<MajorRankDto> rank = overallRankRepositoryCustom.findRankWithUniversityIdAndYear(tempDto.getUni_id(), year);
             tempDto.setRank(rank);
         }
-
-
         return new MainPageDto(result, majors);
     }
 }

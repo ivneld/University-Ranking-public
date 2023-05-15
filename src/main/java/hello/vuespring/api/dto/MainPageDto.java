@@ -16,4 +16,6 @@ public class MainPageDto {
         this.universities = universities;
         this.majors = majors;
     }
+
+
 }
