@@ -42,11 +42,11 @@ public class University {
 //    private String education;
 //    private String library;
 
-//    @OneToMany(mappedBy = "university", cascade = CascadeType.ALL)
-//    List<Qs> qsList = new ArrayList<>();
-//
-//    @OneToMany(mappedBy = "university", cascade = CascadeType.ALL)
-//    List<The> theList = new ArrayList<>();
+    @OneToMany(mappedBy = "university", cascade = CascadeType.ALL)
+    List<Qs> qsList = new ArrayList<>();
+
+    @OneToMany(mappedBy = "university", cascade = CascadeType.ALL)
+    List<The> theList = new ArrayList<>();
 
     @OneToMany(mappedBy = "university", cascade = CascadeType.ALL)
     List<OverallRank> overallRanks = new ArrayList<>();
