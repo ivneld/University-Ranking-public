@@ -20,11 +20,8 @@ public class OverallRank {
     @Column(name = "rank_id")
     private Long id;
 
-    @ColumnDefault("0")
     private Integer totRank;
-    @ColumnDefault("0")
     private Integer gloRank;
-    @ColumnDefault("0")
     private Integer dataYear;
 
     @ManyToOne(fetch = LAZY)

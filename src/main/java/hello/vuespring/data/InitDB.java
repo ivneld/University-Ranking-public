@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.PostConstruct;
 import javax.persistence.EntityManager;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -49,8 +50,10 @@ public class InitDB {
                 List<University> universities = jsonParsing.initUniversityList(filePath.getQsPath(), filePath.getThePath(), 2022);
                 for (University university : universities) {
                     universityRepository.save(university);
-                    saveQs(university, filePath); //FilePath 객체 전달로 filePath 불러오기
-                    saveThe(university, filePath);
+//                    한글 이름 함수 추가
+                    setKorName();
+//                    saveQs(university, filePath); //FilePath 객체 전달로 filePath 불러오기
+//                    saveThe(university, filePath);
                 }
                 initMajor(filePath);
                 initOverallTest(filePath);
@@ -61,6 +64,16 @@ public class InitDB {
             }
         }
 
+        private void setKorName() throws IOException, ParseException {
+            JSONParser parser = new JSONParser();
+            List<University> universities = universityRepository.findByEngNameIsNull();
+
+            for (University university : universities) {
+                String engName = findEngName(parser, university.getName());
+                university.setEngName(engName);
+            }
+
+        }
         private void saveQs(University university, FilePath filePath) throws IOException, ParseException {
             System.out.println("filePath = " + filePath.getQsPath());
 
@@ -128,6 +141,9 @@ public class InitDB {
             else
                 return null;
         }
+
+//        수정
+//        initOverallTest 돌리기 전 대학 리스트 중 영어이름이 없는 대학들 먼저 세팅 해 줘야 함
         public void initOverallTest(FilePath filePath) throws IOException, ParseException {
             ArrayList<OverallRank> result = new ArrayList<>();
             File dir = new File(filePath.getFolderPath());
@@ -151,6 +167,7 @@ public class InitDB {
                         Integer year = Integer.parseInt(folder.getName());
 
                         if (universityRepository.findByName(institution) == null) {
+                            System.out.println(institution + " null case!");
                             String korName = findKorName(parser, institution);
                             universityRepository.save(new University(institution, korName));
                         }
@@ -170,7 +187,7 @@ public class InitDB {
             }
         }
         private static String findKorName(JSONParser parser, String institution) throws IOException, ParseException {
-            String forNoNameFilePath = "/Users/kimyuseong/study/vue-springV2/src/test/resources/for_none_kor_name.json";
+            String forNoNameFilePath = "/Users/kimyuseong/study/vue-springV2/src/main/resources/jsondata/for_none_kor_name.json";
             FileReader temp = new FileReader(forNoNameFilePath);
             JSONArray parse = (JSONArray) parser.parse(temp);
 
@@ -181,6 +198,21 @@ public class InitDB {
                     korName = (String)object.get("kor_name");
             }
             return korName;
+        }
+
+        private static String findEngName(JSONParser parser, String korName) throws IOException, ParseException {
+            String forNoNameFilePath = "/Users/kimyuseong/study/vue-springV2/src/main/resources/jsondata/for_none_kor_name.json";
+            FileReader temp = new FileReader(forNoNameFilePath);
+            JSONArray parse = (JSONArray) parser.parse(temp);
+
+            String engName = "";
+            for (Object o : parse) {
+                JSONObject o1 = (JSONObject) o;
+                if (o1.get("kor_name").equals(korName)) {
+                    engName = (String) o1.get("eng_name");
+                }
+                }
+            return engName;
         }
     }
 }

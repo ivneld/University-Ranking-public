@@ -17,6 +17,26 @@
 #logging.level:
 #  org.hibernate.SQL: debug
 
+##local mysql 서버 환경
+#spring:
+#  datasource:
+#    url: jdbc:mariadb://localhost:3306/university?createDatabaseIfNotExist=true&characterEncoding=utf8
+#    username: root
+#    password: 1234
+#    driver-class-name: org.mariadb.jdbc.Driver
+#
+#  jpa:
+#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+#    hibernate:
+#      ddl-auto: create
+#    properties:
+#      hibernate:
+#        #show_sql:true
+#        format_sql: true
+#
+#logging.level:
+#  org.hibernate.SQL: debug
+
 ## aws server
 #server:
 #  port: 8081
@@ -34,7 +54,7 @@
 #  jpa:
 #    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
 #    hibernate:
-#      ddl-auto: none
+#      ddl-auto: create
 #    properties:
 #      hibernate:
 #        #show_sql:true

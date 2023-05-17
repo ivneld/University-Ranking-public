@@ -6,9 +6,9 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Table(name = "the")
-@Entity(name = "the")
-@Getter
+//@Table(name = "the")
+//@Entity(name = "the")
+//@Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class The {
 

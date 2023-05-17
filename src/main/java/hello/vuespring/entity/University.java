@@ -19,25 +19,19 @@ public class University {
     @GeneratedValue
     @Column(name = "university_id")
     private Long id;
+
     private String name;
     private String engName;
 
     @Lob
-    @ColumnDefault("0")
     private String citation;
-    @ColumnDefault("0")
     private String compRate;
 
     @Lob
-    @ColumnDefault("0")
     private String intro;
-    @ColumnDefault("0")
     private String sfRatio;
-    @ColumnDefault("0")
     private Integer totStud;
-    @ColumnDefault("0")
     private Integer tuition;
-    @ColumnDefault("0")
     private String website;
 
 //    private String foreign;
@@ -72,5 +66,19 @@ public class University {
     public University(String engName, String name) {
         this.engName = engName;
         this.name = name;
+    }
+
+    public void setEngName(String engName) {
+        this.engName = engName;
+    }
+    @PrePersist
+    public void perPersist() {
+        this.citation = this.citation == null ? "-" : this.citation;
+        this.compRate = this.compRate == null ? "-" : this.compRate;
+        this.intro = this.intro == null ? "-" : this.intro;
+        this.sfRatio = this.sfRatio == null ? "-" : this.sfRatio;
+        this.totStud = this.totStud == null ? 0 : this.totStud;
+        this.tuition = this.tuition == null ? 0 : this.tuition;
+        this.website = this.website == null ? "-" : this.website;
     }
 }

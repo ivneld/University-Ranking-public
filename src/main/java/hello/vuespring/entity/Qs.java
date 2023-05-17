@@ -8,9 +8,9 @@ import javax.persistence.*;
 
 import static javax.persistence.FetchType.*;
 
-@Table(name = "qs")
-@Entity(name = "qs")
-@Getter
+//@Table(name = "qs")
+//@Entity(name = "qs")
+//@Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Qs {
 

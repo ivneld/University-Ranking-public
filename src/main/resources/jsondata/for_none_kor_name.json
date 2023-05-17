@@ -1,23 +1,51 @@
 [
   {
     "eng_name" : "Andong National University",
-    "kor_name" : "숙명여자대학교"
+    "kor_name" : "안동대학교"
   },
   {
     "eng_name" : "Catholic Kwandong University",
-    "kor_name" : "대구가톨릭대학교"
-  },
-  {
-    "eng_name" : "Catholic University of Korea",
-    "kor_name" : "우송대학교"
-  },
-  {
-    "eng_name" : "Cha University",
-    "kor_name" : "을지대학교"
+    "kor_name" : "가톨릭관동대학교"
   },
   {
     "eng_name" : "Changwon National University",
-    "kor_name": "경남대학교"
+    "kor_name" : "창원대학교"
+  },
+  {
+    "eng_name" : "Catholic University of Daegu",
+    "kor_name" : "대구가톨릭대학교"
+  },
+  {
+    "eng_name" : "Hansung University",
+    "kor_name" : "한성대학교"
+  },
+  {
+    "eng_name" : "Cha University",
+    "kor_name" : "차의과학대학교"
+  },
+  {
+    "eng_name" : "Gyeongnam National University of Science and Technology",
+    "kor_name" : "경남과학기술대학교"
+  },
+  {
+    "eng_name" : "Tongmyong University",
+    "kor_name" : "동명대학교"
+  },
+  {
+    "eng_name" : "Namseoul University",
+    "kor_name" : "남서울대학교"
+  },
+  {
+    "eng_name" : "Kangnung National University",
+    "kor_name" : "강릉원주대학교"
+  },
+  {
+    "eng_name" : "Kyungil University",
+    "kor_name" : "경일대학교"
+  },
+  {
+    "eng_name" : "Incheon University",
+    "kor_name" : "인천대학교"
   },
   {
     "eng_name" : "Cheongju University",
@@ -84,10 +112,10 @@
   "kor_name": "강릉원주대학교"
 },{
   "eng_name" : "Gyeongsang National University",
-  "kor_name": "경상대학교"
+  "kor_name": "경상국립대학교"
 },{
   "eng_name" : "Hanbat National University",
-  "kor_name": "한밭대학"
+  "kor_name": "한밭대학교"
 },{
   "eng_name" : "Handong Global University",
   "kor_name": "한동대학교"
@@ -199,9 +227,6 @@
     "kor_name": "신라대학교"
   },
  {
-  "eng_name" : "Sookmyung Womens University",
-  "kor_name": "숙명여자대학교"
-},{
   "eng_name" : "Soon Chun Hyang University",
   "kor_name": "순천향대학교"
 },{
