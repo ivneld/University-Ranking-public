@@ -14,10 +14,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 @RequiredArgsConstructor
@@ -73,6 +70,19 @@ public class MainPageService {
             result.remove(tempDto);
         }
 
+        Collections.sort(result, new UniversityTotRankComparator());
         return new MainPageDto(result, majors);
+    }
+
+    static class UniversityTotRankComparator implements Comparator<TempDto> {
+        @Override
+        public int compare(TempDto o1, TempDto o2) {
+            if(o1.getTotRank() > o2.getTotRank())
+                return 1;
+            else if(o1.getTotRank() < o2.getTotRank())
+                return -1;
+            else
+                return 0;
+        }
     }
 }
