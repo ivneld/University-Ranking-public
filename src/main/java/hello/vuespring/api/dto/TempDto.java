@@ -21,7 +21,7 @@ public class TempDto {
     private Integer totStud;
     private Integer tuition;
     private String website;
-
+    private Integer totRank;
     private List<MajorRankDto> rank;
 
     @QueryProjection

@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
@@ -41,18 +42,7 @@ public class MainPageService {
     }
 
     public MainPageDto mainPageResponse(){
-        List<TempDto> result = universityRepositoryCustom.findAllInfo();
-        List<Major> majorList = majorRepository.findAll();
-        List<String> majors = new ArrayList<>();
-
-        for (Major major : majorList) {
-            majors.add(major.getKorName());
-        }
-        for (TempDto tempDto : result) {
-            List<MajorRankDto> rank = overallRankRepositoryCustom.findRankWithUniversityIdAndYear(tempDto.getUni_id(), 2023);
-            tempDto.setRank(rank);
-        }
-        return new MainPageDto(result, majors);
+        return mainPageYearResponse(2023);
     }
 
     public MainPageDto mainPageYearResponse(Integer year) {
@@ -63,10 +53,26 @@ public class MainPageService {
         for (Major major : majorList) {
             majors.add(major.getKorName());
         }
+        List<TempDto> removeList = new ArrayList<>();
         for (TempDto tempDto : result) {
             List<MajorRankDto> rank = overallRankRepositoryCustom.findRankWithUniversityIdAndYear(tempDto.getUni_id(), year);
-            tempDto.setRank(rank);
+            if (rank.isEmpty()) {
+                System.out.println("rank is empty!");
+                removeList.add(tempDto);
+            } else {
+                tempDto.setRank(rank);
+                for (MajorRankDto majorRankDto : rank) {
+                    if (majorRankDto.getMajorName().equals("Universities")) {
+                        tempDto.setTotRank(majorRankDto.getTotRank());
+                        break;
+                    }
+                }
+            }
         }
+        for (TempDto tempDto : removeList) {
+            result.remove(tempDto);
+        }
+
         return new MainPageDto(result, majors);
     }
 }

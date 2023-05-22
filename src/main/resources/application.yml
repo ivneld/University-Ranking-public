@@ -37,7 +37,7 @@
 #logging.level:
 #  org.hibernate.SQL: debug
 
-## aws server
+# aws server
 #server:
 #  port: 8081
 #  ssl:
@@ -54,7 +54,7 @@
 #  jpa:
 #    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
 #    hibernate:
-#      ddl-auto: create
+#      ddl-auto: none
 #    properties:
 #      hibernate:
 #        #show_sql:true
@@ -64,7 +64,7 @@
 #  org.hibernate.SQL: debug
 
   # distribution
-server:
+#server:
   port: 8081
   ssl:
     key-store: classpath:ssl/keystore.p12
