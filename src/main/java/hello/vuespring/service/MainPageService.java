@@ -54,7 +54,7 @@ public class MainPageService {
         for (TempDto tempDto : result) {
             List<MajorRankDto> rank = overallRankRepositoryCustom.findRankWithUniversityIdAndYear(tempDto.getUni_id(), year);
             if (rank.isEmpty()) {
-                System.out.println("rank is empty!");
+                System.out.println(tempDto.getName()+"rank is empty!");
                 removeList.add(tempDto);
             } else {
                 tempDto.setRank(rank);

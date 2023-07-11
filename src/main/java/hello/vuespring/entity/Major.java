@@ -22,7 +22,7 @@ public class Major {
     private String name;
     private String korName;
 
-    @OneToMany(mappedBy = "major", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "major", cascade = CascadeType.REMOVE, orphanRemoval = true)
     List<OverallRank> overallRanks = new ArrayList<>();
 
     public Major(String name) {

@@ -28,7 +28,6 @@ public class JsonParsing {
 
         List<University> universities = new ArrayList<>();
 
-
         JSONArray array = (JSONArray) jsonObject.get(year.toString());
         for (Object o : array) {
             universities.add(setQsInUniversity(o));

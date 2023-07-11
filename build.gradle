@@ -24,11 +24,19 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.5.7'
+
 	implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
 
 	//querydsl 추가
 	implementation "com.querydsl:querydsl-jpa:5.0.0"
 	implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client'
+
+	implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE'
+
+	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml'
+
+//	webClient
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-webflux'
 
 	compileOnly 'org.projectlombok:lombok'
 
@@ -69,3 +77,9 @@ compileQuerydsl {
 test.onlyIf {
 	!project.hasProperty('test')
 }
+
+bootRun {
+	String activeProfile = System.properties['spring.profiles.active']
+	systemProperty "spring.profiles.active", activeProfile
+}
+

@@ -13,8 +13,16 @@ public interface UniversityRepository extends JpaRepository<University, Long> {
     public University findOne(@Param("universityId") Long id);
 
     @Query("select u from university u where engName = :engName")
-    public University findByName(@Param("engName") String engName);
+    public University findByEngName(@Param("engName") String engName);
 
     @Query("select u from university u where engName is null")
     public List<University> findByEngNameIsNull();
+
+    @Query("select u from university u where name = ''")
+    public List<University> findByNameIsNull();
+
+    public University findByName(String name);
+
+    @Query("select u from university u where citation = '-'")
+    public List<University> findNoInfo();
 }

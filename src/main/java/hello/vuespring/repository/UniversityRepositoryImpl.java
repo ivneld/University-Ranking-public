@@ -3,7 +3,7 @@ package hello.vuespring.repository;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import hello.vuespring.api.dto.QTempDto;
 import hello.vuespring.api.dto.TempDto;
-import hello.vuespring.entity.QUniversity;
+import hello.vuespring.repository.dao.DuplicateUniversityDao;
 
 import javax.persistence.EntityManager;
 import java.util.List;
@@ -28,5 +28,15 @@ public class UniversityRepositoryImpl implements UniversityRepositoryCustom{
                 .fetch();
     }
 
+    @Override
+    public List<String> findDuplicate() {
+
+        return queryFactory
+                .select(university.name)
+                .from(university)
+                .groupBy(university.name)
+                .having(university.name.count().gt(1))
+                .fetch();
+    }
 
 }

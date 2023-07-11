@@ -34,14 +34,18 @@ public class University {
     private Integer tuition;
     private String website;
 
-    @OneToMany(mappedBy = "university", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "university", cascade = CascadeType.REMOVE, orphanRemoval = true)
     List<Qs> qsList = new ArrayList<>();
 
-    @OneToMany(mappedBy = "university", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "university", cascade = CascadeType.REMOVE, orphanRemoval = true)
     List<The> theList = new ArrayList<>();
 
-    @OneToMany(mappedBy = "university", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "university", cascade = CascadeType.REMOVE, orphanRemoval = true)
     List<OverallRank> overallRanks = new ArrayList<>();
+
+    @OneToOne(mappedBy = "university", cascade = CascadeType.REMOVE, orphanRemoval = true)
+    UniversityDetail detail;
+
 
     public University(String name, String engName, String citation, String compRate, String intro, String sfRatio, Integer totStud, Integer tuition, String website) {
         this.name = name;
@@ -72,5 +76,9 @@ public class University {
         this.totStud = this.totStud == null ? 0 : this.totStud;
         this.tuition = this.tuition == null ? 0 : this.tuition;
         this.website = this.website == null ? "-" : this.website;
+    }
+
+    public void setDetail(UniversityDetail detail) {
+        this.detail = detail;
     }
 }
